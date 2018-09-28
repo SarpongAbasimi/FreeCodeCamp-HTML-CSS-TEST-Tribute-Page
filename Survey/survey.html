@@ -1,0 +1,154 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <style>
+
+  :root{
+    --lable-margin:5px;
+  }
+
+  #main{
+    width:100%;
+    height: 100%;
+    background-color: rgb(232, 245, 253);
+    font-family: sans-serif;
+  }
+   #title{
+     text-align: center;
+     padding-top: 20px;
+   }
+   #main_container{
+     background-color: #fff;
+     border-radius: 5px;
+     width: 80%;
+     height: auto;
+     margin: 0 auto;
+     padding: 10px;
+   }
+
+   #main_container #description{
+     text-align: center;
+
+   }
+   #main_container #survey-form{
+     margin: 0 auto;
+     max-width: 550px ;
+     padding: 10px;
+   }
+
+  #main_container #survey-form .name_container{
+    margin-bottom:var(--lable-margin);
+  }
+  #main_container #survey-form .email_container{
+
+    margin-bottom:var(--lable-margin);
+  }
+
+  #main_container #survey-form .age_container{
+  }
+
+   #main_container #survey-form .age_container #number{
+  width: 120px;
+   }
+
+#main_container #survey-form .drop-down{
+  margin: 10px auto;
+  padding-top: 20px;
+}
+
+#main_container #survey-form .radio-button .radio{
+margin-bottom: 10px;
+}
+
+#main_container #survey-form .check-box .cbox{
+margin-bottom: 10px;
+}
+
+
+  </style>
+</head>
+<body id="main">
+  <div>
+    <h1 id="title">Survey Form</h1>
+  </div>
+  <div id="main_container">
+     <p id="description">Let us know how we can improve Blog </p>
+     <form id="survey-form" method="POST" action="#">
+        <div class="name_container">
+       <label id="name-label" for="name">Name:
+       <input type="text" name="Name" placeholder="Enter your name" required id="name" autofocus> <br>
+       </label>
+      </div>
+
+       <div class="email_container">
+       <label id="email-label" for="email">
+      Email: <input type="email" name="Email" placeholder="Enter your email" required id="email"><br>
+       </label>
+     </div>
+
+        <div class="age_container">
+       <label id="number-label" for="number"> Age:
+        <input type="number" name="Age" placeholder="Enter your age" required id="number" min="1" max="125">
+      </label>
+     </div>
+
+     <div class="drop-down">
+       <label>Which option best describes your current role?
+         <select id="dropdown">
+           <option value="" disabled>Select your option</option>
+           <option>Student</option>
+           <option>Full Time Job</option>
+           <option>Full Time Leaner</option>
+           <option>Prefer not to say</option>
+           <option>Other</option>
+         </select>
+     </div>
+
+     <div class="radio-button">
+       <p> How likely is that you would recommend Blog to a friend?</p>
+       <label>
+         <input type="radio" name="radio-bottons" value="1"class="radio">Definately <br>
+      </label>
+      <label>
+        <input type="radio" name="radio-bottons" value="2"class="radio">Maybe <br>
+     </label>
+     <label>
+       <input type="radio" name="radio-bottons" value="3" class="radio">Not sure <br>
+    </label>
+     </div>
+
+     <div class="check-box">
+       <p> Things that should be improved in the future
+      (Check all that apply)</p>
+      <div>
+       <label>
+         <input name="prefer" type="checkbox" value="1" class="cbox">Front-End-Developer
+       </label> <br>
+      </div>
+       <label >
+         <input  name="prefer" type="checkbox" value="2" class="cbox">Back-End-Developer <br>
+       </label>
+       <label >
+         <input name="prefer" type="checkbox" value="3" class="cbox">HTML<br>
+       </label>
+       <label >
+         <input name="prefer" type="checkbox" value="4" class="cbox">JavaScript<br>
+       </label>
+       <label >
+         <input name="prefer" type="checkbox" value="5" class="cbox">Css<br>
+       </label>
+     </div>
+
+     <div>
+         <span>Any Comments or Suggestions?</span> <br>
+         <textarea rows="4" cols="50" placeholder="Describe yourself here..."></textarea>
+     </div>
+
+      <button id="submit "type="submit">Submit</button>
+
+     </form>
+
+  </div>
+</body>
+</html>
